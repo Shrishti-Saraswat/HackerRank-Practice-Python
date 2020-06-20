@@ -1,0 +1,19 @@
+
+
+N=int(input())
+students={}
+for _ in range(N):
+    name=input()
+    score=float(input())
+    if score in students:
+        students[score].append(name)
+    else:
+        students[score]=[name]   
+li1=[]
+for i in students:
+    li1.append([i,students[i]])
+li1.sort()
+result=li1[1][1]
+result.sort()
+for i in result:
+    print(i)  
