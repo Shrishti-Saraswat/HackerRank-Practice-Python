@@ -1,0 +1,7 @@
+import collections
+
+s=sorted(input().strip())
+s1=collections.Counter(s).most_common()
+s1=sorted(s1,key=lambda x: (x[1] *-1,x[0]))
+for i in range(0,3):
+    print(s1[i][0],s1[i][1])
